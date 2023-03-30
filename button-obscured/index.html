@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+        <h1>Button Obscured</h1>
+        <p>This button is not obscured at start</p>
+        <div id="click-attach-0">
+            <button id="button-0" onclick="showText(0)">Button</button>
+        </div>
+        <div id="click-0-text"></div>
+        <p>This button will be unobscured in 1 sec..</p>
+        <div id="click-attach-1" style="position:relative;">
+            <button id="button-1" onclick="showText(1)">Button 1</button>
+            <div id="obscure-1" style="position:absolute; left: 0; bottom:0; right:0; top:0; background-color: aqua;"></div>
+        </div>
+        <div id="click-1-text"></div>
+        <p>This button will be enabled in 2 sec..</p>
+        <div id="click-attach-2" style="position:relative;">
+            <button id="button-2" onclick="showText(2)">Button 2</button>
+            <div id="obscure-2" style="position:absolute; left: 0; bottom:0; right:0; top:0; background-color: aqua;"></div>
+        </div>
+        <div id="click-2-text"></div>
+        <p>This button will be enabled in 3 sec..</p>
+        <div id="click-attach-3" style="position:relative;">
+            <button id="button-3" onclick="showText(3)">Button 3</button>
+            <div id="obscure-3" style="position:absolute; left: 0; bottom:0; right:0; top:0; background-color: aqua;"></div>
+        </div>
+        <div id="click-3-text"></div>
+        <p>This button will be enabled in 4 sec..</p>
+        <div id="click-attach-4" style="position:relative;">
+            <button id="button-4" onclick="showText(4)">Button 4</button>
+            <div id="obscure-4" style="position:absolute; left: 0; bottom:0; right:0; top:0; background-color: aqua;"></div>
+        </div>
+        <div id="click-4-text"></div>
+        <p>This button will be enabled in 5 sec..</p>
+        <div id="click-attach-5" style="position:relative;">
+            <button id="button-5" onclick="showText(5)">Button 5</button>
+            <div id="obscure-5" style="position:absolute; left: 0; bottom:0; right:0; top:0; background-color: aqua;"></div>
+        </div>
+        <div id="click-5-text"></div>
+        <p>This button will be enabled in 15 sec..</p>
+        <div id="click-attach-15" style="position:relative;">
+            <button id="button-15" onclick="showText(15)">Button 15</button>
+            <div id="obscure-15" style="position:absolute; left: 0; bottom:0; right:0; top:0; background-color: aqua;"></div>
+        </div>
+        <div id="click-15-text"></div>
+    </body>
+    <script>
+        const myTimeout1 = setTimeout(showButton1, 1000);
+        function showButton1() {
+            document.getElementById("obscure-1").remove();
+        }
+
+        const myTimeout2 = setTimeout(showButton2, 2000);
+        function showButton2() {
+            document.getElementById("obscure-2").remove();
+        }
+
+        const myTimeout3 = setTimeout(showButton3, 3000);
+        function showButton3() {
+            document.getElementById("obscure-3").remove();
+        }
+
+        const myTimeout4 = setTimeout(showButton4, 4000);
+        function showButton4() {
+            document.getElementById("obscure-4").remove();
+        }
+
+
+        const myTimeout5 = setTimeout(showButton5, 5000);
+        function showButton5() {
+            document.getElementById("obscure-5").remove();
+        }
+
+        const myTimeout15 = setTimeout(showButton15, 15000);
+        function showButton15() {
+            document.getElementById("obscure-15").remove();
+        }
+
+        function showText(buttonIndex){
+            document.getElementById("click-" + buttonIndex +  "-text").innerHTML = "Clicked " + buttonIndex;
+        }
+    </script>
+</html>
