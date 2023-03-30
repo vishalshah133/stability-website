@@ -35,6 +35,11 @@
             <button id="button-5" style="display:none;" onclick="showText(5)">Button 5</button>
         </div>
         <div id="click-5-text"></div>
+        <p>This button will be visible in 15 sec..</p>
+        <div id="click-attach-15">
+            <button id="button-15" style="display:none;" onclick="showText(15)">Button 15</button>
+        </div>
+        <div id="click-15-text"></div>
     </body>
     <script>
         const myTimeout1 = setTimeout(showButton1, 1000);
@@ -61,6 +66,11 @@
         const myTimeout5 = setTimeout(showButton5, 5000);
         function showButton5() {
             document.getElementById("button-5").setAttribute("style","display:visible;");
+        }
+
+        const myTimeout15 = setTimeout(showButton15, 15000);
+        function showButton15() {
+            document.getElementById("button-15").setAttribute("style","display:visible;");
         }
 
         function showText(buttonIndex){

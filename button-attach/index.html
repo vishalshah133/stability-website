@@ -25,6 +25,9 @@
         <p>This button will be attached in 5 sec..</p>
         <div id="click-attach-5"></div>
         <div id="click-5-text"></div>
+        <p>This button will be attached in 15 sec..</p>
+        <div id="click-attach-15"></div>
+        <div id="click-15-text"></div>
     </body>
     <script>
         const myTimeout1 = setTimeout(showButton1, 1000);
@@ -51,6 +54,11 @@
         const myTimeout5 = setTimeout(showButton5, 5000);
         function showButton5() {
             document.getElementById("click-attach-5").innerHTML = "<button onclick='showText(5)'>Button 5</button>";
+        }
+
+        const myTimeout15 = setTimeout(showButton15, 15000);
+        function showButton15() {
+            document.getElementById("click-attach-15").innerHTML = "<button onclick='showText(15)'>Button 15</button>";
         }
 
         function showText(buttonIndex){
