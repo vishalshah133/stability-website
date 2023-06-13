@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Input Readonly</title>
+    </head>
+    <body>
+        <h1>Input Readonly</h1>
+        <p>This input is readonly at start</p>
+        <div id="input-attach-0">
+            <input id="input-0"></input>
+        </div>
+        <div id="input-0-text"></div>
+        <p>This input will be readonly in 1 sec..</p>
+        <div id="input-attach-1">
+            <input id="input-1" readonly></input>
+        </div>
+        <div id="input-1-text"></div>
+        <p>This input will be readonly in 2 sec..</p>
+        <div id="input-attach-2">
+            <input id="input-2" readonly></input>
+        </div>
+        <div id="input-2-text"></div>
+        <p>This input will be readonly in 3 sec..</p>
+        <div id="input-attach-3">
+            <input id="input-3" readonly></input>
+        </div>
+        <div id="input-3-text"></div>
+        <p>This input will be readonly in 4 sec..</p>
+        <div id="input-attach-4">
+            <input id="input-4" readonly></input>
+        </div>
+        <div id="input-4-text"></div>
+        <p>This input will be readonly in 5 sec..</p>
+        <div id="input-attach-5">
+            <input id="input-5" readonly></input>
+        </div>
+        <div id="input-5-text"></div>
+        <p>This input will be readonly in 15 sec..</p>
+        <div id="input-attach-15">
+            <input id="input-15" readonly></input>
+        </div>
+        <div id="input-15-text"></div>
+    </body>
+    <script>
+        const myTimeout1 = setTimeout(showinput1, 1000);
+        function showinput1() {
+            document.getElementById("input-1").removeAttribute('readonly');
+        }
+
+        const myTimeout2 = setTimeout(showinput2, 2000);
+        function showinput2() {
+            document.getElementById("input-2").removeAttribute('readonly');
+        }
+
+        const myTimeout3 = setTimeout(showinput3, 3000);
+        function showinput3() {
+            document.getElementById("input-3").removeAttribute('readonly');
+        }
+
+        const myTimeout4 = setTimeout(showinput4, 4000);
+        function showinput4() {
+            document.getElementById("input-4").removeAttribute('readonly');
+        }
+
+
+        const myTimeout5 = setTimeout(showinput5, 5000);
+        function showinput5() {
+            document.getElementById("input-5").removeAttribute('readonly');
+        }
+
+        const myTimeout15 = setTimeout(showinput15, 15000);
+        function showinput15() {
+            document.getElementById("input-15").removeAttribute('readonly');
+        }
+
+        function showText(inputIndex){
+            document.getElementById("input-" + inputIndex +  "-text").innerHTML = "inputed " + inputIndex;
+        }
+    </script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Input Attach Clear</title>
+    </head>
+    <body>
+        <h1>Input Attach Clear</h1>
+        <p>This input is attached at start</p>
+        <div id="click-attach-0">
+            <input id="input-0"></input>
+        </div>
+        <p>This input will be attached in 1 sec..</p>
+        <div id="input-attach-1"></div>
+        <p>This input will be attached in 2 sec..</p>
+        <div id="input-attach-2"></div>
+        <p>This input will be attached in 3 sec..</p>
+        <div id="input-attach-3"></div>
+        <p>This input will be attached in 4 sec..</p>
+        <div id="input-attach-4"></div>
+        <p>This input will be attached in 5 sec..</p>
+        <div id="input-attach-5"></div>
+        <p>This input will be attached in 15 sec..</p>
+        <div id="input-attach-15"></div>
+    </body>
+    <script>
+
+        function startShowing(secs){
+            setTimeout(function() {
+                document.getElementById("input-attach-"+secs).innerHTML = "<input id='input-"+secs+"' value='Nightwatch'></input>";
+            }, secs*1000);
+        }
+
+        startShowing(1);
+        startShowing(2);
+        startShowing(3);
+        startShowing(4);    
+        startShowing(5);
+        startShowing(15);
+    </script>
+</html>

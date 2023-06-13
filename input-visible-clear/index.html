@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Input Visible Clear</title>
+    </head>
+    <body>
+        <h1>Input Visible Clear</h1>
+        <p>This input is visible at start</p>
+        <div id="click-attach-0">
+            <input id="input-0" value="Nightwatch"></input>
+        </div>
+        <p>This input will be visible in 1 sec..</p>
+        <div id="input-attach-1">
+            <input id="input-1" value="Nightwatch" style="display: none;"></input>
+        </div>
+        <p>This input will be visible in 2 sec..</p>
+        <div id="input-attach-2">
+            <input id="input-2" value="Nightwatch" style="display: none;"></input>
+        </div>
+        <p>This input will be visible in 3 sec..</p>
+        <div id="input-attach-3">
+            <input id="input-3" value="Nightwatch" style="display: none;"></input>
+        </div>
+        <p>This input will be visible in 4 sec..</p>
+        <div id="input-attach-4">
+            <input id="input-4" value="Nightwatch" style="display: none;"></input>
+        </div>
+        <p>This input will be visible in 5 sec..</p>
+        <div id="input-attach-5">
+            <input id="input-5" value="Nightwatch" style="display: none;"></input>
+        </div>
+        <p>This input will be visible in 15 sec..</p>
+        <div id="input-attach-15">
+            <input id="input-15" value="Nightwatch" style="display: none;"></input>
+        </div>
+    </body>
+    <script>
+
+        function startShowing(secs){
+            setTimeout(function() {
+                document.getElementById("input-"+secs).setAttribute("style","display:visible;");
+            }, secs*1000);
+        }
+
+        startShowing(1);
+        startShowing(2);
+        startShowing(3);
+        startShowing(4);    
+        startShowing(5);
+        startShowing(15);
+    </script>
+</html>

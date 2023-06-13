@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Input Enabled Clear</title>
+    </head>
+    <body>
+        <h1>Input Enabled Clear</h1>
+        <p>This input is enabled at start</p>
+        <div id="input-attach-0">
+            <input id="input-0" value="Nightwatch"></input>
+        </div>
+        <div id="input-0-text"></div>
+        <p>This input will be enabled in 1 sec..</p>
+        <div id="input-attach-1">
+            <input id="input-1" value="Nightwatch" disabled></input>
+        </div>
+        <div id="input-1-text"></div>
+        <p>This input will be enabled in 2 sec..</p>
+        <div id="input-attach-2">
+            <input id="input-2" value="Nightwatch" disabled></input>
+        </div>
+        <div id="input-2-text"></div>
+        <p>This input will be enabled in 3 sec..</p>
+        <div id="input-attach-3">
+            <input id="input-3" value="Nightwatch" disabled></input>
+        </div>
+        <div id="input-3-text"></div>
+        <p>This input will be enabled in 4 sec..</p>
+        <div id="input-attach-4">
+            <input id="input-4" value="Nightwatch" disabled></input>
+        </div>
+        <div id="input-4-text"></div>
+        <p>This input will be enabled in 5 sec..</p>
+        <div id="input-attach-5">
+            <input id="input-5" value="Nightwatch" disabled></input>
+        </div>
+        <div id="input-5-text"></div>
+        <p>This input will be enabled in 15 sec..</p>
+        <div id="input-attach-15">
+            <input id="input-15" value="Nightwatch" disabled></input>
+        </div>
+        <div id="input-15-text"></div>
+    </body>
+    <script>
+        const myTimeout1 = setTimeout(showinput1, 1000);
+        function showinput1() {
+            document.getElementById("input-1").disabled = false;
+        }
+
+        const myTimeout2 = setTimeout(showinput2, 2000);
+        function showinput2() {
+            document.getElementById("input-2").disabled = false;
+        }
+
+        const myTimeout3 = setTimeout(showinput3, 3000);
+        function showinput3() {
+            document.getElementById("input-3").disabled = false;
+        }
+
+        const myTimeout4 = setTimeout(showinput4, 4000);
+        function showinput4() {
+            document.getElementById("input-4").disabled = false;
+        }
+
+
+        const myTimeout5 = setTimeout(showinput5, 5000);
+        function showinput5() {
+            document.getElementById("input-5").disabled = false;
+        }
+
+        const myTimeout15 = setTimeout(showinput15, 15000);
+        function showinput15() {
+            document.getElementById("input-15").disabled = false;
+        }
+
+        function showText(inputIndex){
+            document.getElementById("input-" + inputIndex +  "-text").innerHTML = "inputed " + inputIndex;
+        }
+    </script>
+</html>
